@@ -66,7 +66,7 @@ RUN echo -n "\
 $(echo '#')!/bin/bash\n\
 source \"/emsdk/emsdk_env.sh\"\n\
 cd /project\n\
-mkdir .cargo\n\
+mkdir -p .cargo\n\
 cp /config.toml .cargo/\n\
 cargo build --release --target=wasm32-unknown-emscripten \n\
 " > compile && chmod +x compile
