@@ -113,15 +113,15 @@ Godotにて、エクスポート用にHTML5用等のテンプレートをイン�
 以下の操作を順に行っていきます。( [Godot EngineからRustを呼ぶ](https://zenn.dev/kawaxumax/articles/e0dedf3f6d4219) なども参考にしてください)
 
 1. Godotのプロジェクトを用意し、`Node` 型のルートノードを含むシーンを用意してください。
-2. 動的ライブラリを導入するためにファイルシステムタブで右クリック→ `新規リソース` → `GDNativeScript`から `.tres` ファイルを用意します。名前は好きなものでよいのでここではデフォルトの `new_gdnativelibrary.tres` とします。
-3. 前節までで作成した動的ライブラリを対応するプラットフォームに指定します。指定後**必ずインスペクタにある保存ボタンで.tresファイルを保存**してください。
+2. 動的ライブラリを導入するためにファイルシステムタブで右クリック→ `新規リソース` → `GDNativeScript`から `.gdnlib` ファイルを用意します( `.tres` から変更します。 `.tres` との違いはあまり無いみたい...?)。名前は好きなものでよいのでここではデフォルトの `new_gdnativelibrary.gdnlib` とします。
+3. 前節までで作成した動的ライブラリを対応するプラットフォームに指定します。指定後**必ずインスペクタにある保存ボタンでnew_gdnativelibrary.gdnlibファイルを保存**してください。
     - `.wasm`: `HTML5 wasm32`
     - `.dll`: `Windows 64`
 
 ![save.png](images/save.png)
 
 4. ルートノードにスクリプトをアタッチします。言語を `NativeScript` 、クラス名を `HelloWorld` にしておきます。 `Node.gdns` のようなファイルが生成されます。
-5. アタッチしたスクリプトのインスペクタにある `NativeScript` → `Library` に先程用意した `new_gdnativelibrary.tres` を指定します。その後、 `Node.gdns` の方を保存します。
+5. アタッチしたスクリプトのインスペクタにある `NativeScript` → `Library` に先程用意した `new_gdnativelibrary.gdnlib` を指定します。その後、 `Node.gdns` の方を保存します。
 6. `Node.tscn` を保存し、メインシーンに指定します。
 
 ここからの確認方法は分岐します。
