@@ -113,7 +113,7 @@ Godotにて、エクスポート用にHTML5用等のテンプレートをイン�
 以下の操作を順に行っていきます。( [Godot EngineからRustを呼ぶ](https://zenn.dev/kawaxumax/articles/e0dedf3f6d4219) なども参考にしてください)
 
 1. Godotのプロジェクトを用意し、`Node` 型のルートノードを含むシーンを用意してください。
-2. 動的ライブラリを導入するためにファイルシステムタブで右クリック→ `新規リソース` → `GDNativeScript`から `.gdnlib` ファイルを用意します( `.tres` から変更します。 `.tres` との違いはあまり無いみたい...?)。名前は好きなものでよいのでここではデフォルトの `new_gdnativelibrary.gdnlib` とします。
+2. 動的ライブラリを導入するためにファイルシステムタブで右クリック→ `新規リソース` → `GDNativeLibrary` から `.gdnlib` ファイルを用意します( `.tres` から変更します。 `.tres` との違いはあまり無いみたい...?)。名前は好きなものでよいのでここではデフォルトの `new_gdnativelibrary.gdnlib` とします。
 3. 前節までで作成した動的ライブラリを対応するプラットフォームに指定します。指定後**必ずインスペクタにある保存ボタンでnew_gdnativelibrary.gdnlibファイルを保存**してください。
     - `.wasm`: `HTML5 wasm32`
     - `.dll`: `Windows 64`
